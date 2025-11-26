@@ -13,164 +13,451 @@
     }
 
     body {
-      background: #f7f7fb;
-      color: #222;
-      line-height: 1.5;
+      background: radial-gradient(circle at top, #eef2ff 0, #fdf2ff 25%, #f8fafc 60%);
+      color: #0f172a;
+      line-height: 1.6;
     }
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e0e0ee;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(248, 250, 252, 0.92);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      color: #4c1d95;
+    }
+
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: conic-gradient(from 180deg, #4f46e5, #ec4899, #f97316, #4f46e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.75rem;
     }
 
     nav a {
-      margin-left: 16px;
+      margin-left: 18px;
       text-decoration: none;
-      color: #444;
-      font-size: 0.95rem;
+      color: #475569;
+      font-size: 0.9rem;
+      transition: color 0.15s ease, opacity 0.15s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #4f46e5;
+      opacity: 0.85;
+    }
+
+    .nav-cta {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #4f46e5;
+      color: #fff;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 18px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+    }
+
+    .nav-cta:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(79, 70, 229, 0.35);
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 32px 16px 64px;
+      padding: 32px 16px 72px;
     }
 
     .hero {
-      text-align: center;
-      padding: 48px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+      padding: 32px 22px 30px;
+      margin-top: 16px;
+      background: rgba(248, 250, 252, 0.9);
+      border-radius: 24px;
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.16);
+      border: 1px solid rgba(199, 210, 254, 0.9);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      background: rgba(224, 231, 255, 0.9);
+      color: #4338ca;
+      margin-bottom: 12px;
+    }
+
+    .hero-pill span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
     }
 
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      line-height: 1.1;
       margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(120deg, #4f46e5, #ec4899, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .hero p {
       max-width: 520px;
-      margin: 0 auto 24px;
-      color: #555;
+      margin-bottom: 18px;
+      color: #4b5563;
+      font-size: 0.98rem;
     }
 
-    .hero .cta-btn {
-      display: inline-block;
+    .hero-meta {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
       padding: 10px 20px;
       border-radius: 999px;
       border: none;
-      background: #4f46e5;
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
       color: #fff;
       font-size: 0.95rem;
       cursor: pointer;
       text-decoration: none;
+      box-shadow: 0 12px 30px rgba(79, 70, 229, 0.45);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
     }
 
-    .hero .cta-btn:hover {
-      opacity: 0.9;
+    .btn-primary:hover {
+      opacity: 0.96;
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(79, 70, 229, 0.55);
     }
 
-    section {
+    .btn-ghost {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      background: rgba(248, 250, 252, 0.7);
+      color: #4b5563;
+      font-size: 0.92rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(239, 246, 255, 0.9);
+      border-color: #4f46e5;
+      color: #111827;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+      font-size: 0.78rem;
+    }
+
+    .pill-small {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(219, 234, 254, 0.8);
+      color: #1d4ed8;
+    }
+
+    .pill-small.soft {
+      background: rgba(254, 249, 195, 0.8);
+      color: #b45309;
+    }
+
+    .pill-small.soon {
+      background: rgba(254, 226, 226, 0.85);
+      color: #b91c1c;
+    }
+
+    /* Hero image side */
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-card {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #f9fafb, #eef2ff);
+      padding: 16px 16px 18px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.25);
+      border: 1px solid rgba(191, 219, 254, 0.9);
+    }
+
+    .hero-baby {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #e5e7eb;
+      margin-bottom: 12px;
+    }
+
+    .hero-baby img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .hero-card p {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #6366f1;
+    }
+
+    .hero-mini-badge {
+      position: absolute;
+      right: -10px;
+      bottom: 0;
+      transform: translateY(20px);
+      background: #f97316;
+      color: #fff7ed;
+      padding: 8px 12px;
+      border-radius: 14px;
+      font-size: 0.75rem;
+      box-shadow: 0 16px 40px rgba(248, 113, 113, 0.5);
+    }
+
+    main section {
       margin-top: 40px;
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 24px 20px;
-      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+      background: rgba(248, 250, 252, 0.96);
+      border-radius: 20px;
+      padding: 22px 20px 22px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.15);
+      border: 1px solid rgba(226, 232, 240, 0.9);
     }
 
     section h2 {
-      margin-bottom: 12px;
-      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-size: 1.35rem;
+      color: #111827;
+    }
+
+    section p {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .founder-note {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(224, 231, 255, 0.6);
+      font-size: 0.9rem;
+      color: #4338ca;
     }
 
     .services-list {
       list-style: none;
-      margin-top: 8px;
+      margin-top: 12px;
     }
 
     .services-list li {
-      margin-bottom: 8px;
+      margin-bottom: 9px;
+      font-size: 0.95rem;
+      color: #374151;
     }
 
     .tag {
       display: inline-block;
       padding: 3px 10px;
       border-radius: 999px;
-      background: #e0e7ff;
+      background: rgba(219, 234, 254, 0.9);
       font-size: 0.8rem;
-      margin-left: 6px;
+      margin-left: 8px;
+      color: #1d4ed8;
+    }
+
+    .tag-soon {
+      background: rgba(254, 226, 226, 0.95);
+      color: #b91c1c;
     }
 
     .locations-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
       margin-top: 12px;
     }
 
     .location-card {
-      border-radius: 10px;
-      border: 1px solid #e0e0ee;
-      padding: 14px 12px;
-      background: #fafbff;
+      border-radius: 16px;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      padding: 14px 12px 14px;
+      background: linear-gradient(145deg, #f9fafb, #eff6ff);
+      font-size: 0.92rem;
+      color: #4b5563;
     }
 
     .location-card h3 {
       margin-bottom: 6px;
-      font-size: 1.05rem;
+      font-size: 1rem;
+      color: #111827;
     }
 
     .coming-soon {
       font-size: 0.85rem;
-      color: #6b21a8;
+      color: #b91c1c;
       font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    /* Baby gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      background: #e5e7eb;
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-caption {
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      background: rgba(248, 250, 252, 0.96);
     }
 
     .contact-box p {
       margin-bottom: 8px;
     }
 
-    .contact-box strong {
-      display: inline-block;
-      width: 80px;
+    .contact-box a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
       font-size: 0.8rem;
-      padding: 24px 12px 32px;
-      color: #777;
+      padding: 28px 12px 34px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 22px 18px 24px;
+      }
+
+      .hero-image-wrapper {
+        order: -1;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 600px) {
-      header {
+      .nav-inner {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
       }
 
       nav a {
         margin-left: 0;
-        margin-right: 16px;
       }
 
-      .hero h1 {
-        font-size: 1.8rem;
+      .nav-cta {
+        margin-left: 0;
       }
     }
   </style>
@@ -178,83 +465,187 @@
 <body>
 
   <header>
-    <div class="logo">Nova Familie</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#locations">Locations</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-mark">NF</div>
+        Nova Familie
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#locations">Locations</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Book info call</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
+    <!-- HERO -->
     <section class="hero">
-      <h1>Growing Families With Care</h1>
-      <p>
-        Nova Familie supports intended parents on their path to parenthood through surrogacy and IVF
-        with trusted partners in the Netherlands, and soon Mexico.
-      </p>
-      <a href="#contact" class="cta-btn">Book a free info call</a>
+      <div>
+        <div class="hero-pill">
+          <span class="dot"></span>
+          Based in the Netherlands • Ethical surrogacy & IVF
+        </div>
+        <h1>
+          Supporting your path to
+          <span class="hero-highlight">parenthood</span>.
+        </h1>
+        <p>
+          Nova Familie guides intended parents through surrogacy and IVF in the Netherlands,
+          with carefully built, cross-border options in Mexico coming soon.
+        </p>
+        <p class="hero-meta">
+          Clear information. Trusted partners. One team by your side from the first question
+          to holding your baby.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Book a free information call</a>
+          <a href="#services" class="btn-ghost">Learn how the process works</a>
+        </div>
+        <div class="hero-badge-row">
+          <div class="pill-small">Surrogacy in the Netherlands</div>
+          <div class="pill-small soft">IVF support & coordination</div>
+          <div class="pill-small soon">Mexico • Cross-border (coming soon)</div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-card">
+          <div class="hero-baby">
+            <!-- Replace this with your own AI-generated baby image -->
+            <img src="images/ai-baby-hero.jpg" alt="AI generated illustration of a sleeping baby" />
+          </div>
+          <h3>From first idea to first cuddle</h3>
+          <p>
+            We combine clear planning, emotional support, and reliable partners so you never have
+            to walk this journey alone.
+          </p>
+          <div class="hero-card-meta">
+            <span>Surrogacy & IVF • NL</span>
+            <span>Founder: Erik Finch</span>
+          </div>
+        </div>
+
+        <div class="hero-mini-badge">
+          New: Mexico programs<br />in development
+        </div>
+      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
       <h2>About Nova Familie</h2>
       <p>
-        Nova Familie is dedicated to helping individuals and couples build the family they dream of.
-        We focus on clear communication, ethical partnerships, and practical guidance at every step
-        of the surrogacy and IVF journey.
+        Nova Familie is a surrogacy and IVF coordination company based in the Netherlands.
+        We support individuals and couples who dream of becoming parents, with an approach
+        that is transparent, ethical, and human.
       </p>
+      <div class="founder-note">
+        Founded and led by <strong>Erik Finch</strong>, Nova Familie focuses on clear communication,
+        realistic timelines, and choosing partners who genuinely care about the families they serve.
+      </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services">
       <h2>Our Services</h2>
+      <p>We offer guidance, coordination, and continuous support – not just one clinic referral.</p>
       <ul class="services-list">
         <li>
-          <strong>Surrogacy coordination</strong>
+          <strong>Surrogacy coordination in the Netherlands</strong>
           <span class="tag">Netherlands</span>
         </li>
         <li>
-          <strong>IVF support</strong>
+          <strong>IVF support & planning</strong> – helping you understand options, timelines,
+          and next steps with partner clinics.
           <span class="tag">Netherlands</span>
         </li>
         <li>
-          <strong>Cross-border programs</strong>
-          <span class="tag">Mexico – coming soon</span>
+          <strong>Cross-border surrogacy & IVF programs</strong>
+          <span class="tag tag-soon">Mexico – coming soon</span>
         </li>
         <li>
-          Matching with partner clinics, legal teams, and psychological support
+          Coordination with partner clinics, legal teams, and psychological support professionals.
+        </li>
+        <li>
+          Ongoing check-ins so you always know what is happening and what comes next.
         </li>
       </ul>
     </section>
 
+    <!-- LOCATIONS -->
     <section id="locations">
       <h2>Where We Operate</h2>
       <div class="locations-grid">
         <div class="location-card">
           <h3>Netherlands</h3>
           <p>
-            Support for local and international intended parents, with coordination
-            between clinics, legal counsel, and support professionals.
+            Nova Familie is based in the Netherlands. We support both local and international
+            intended parents who wish to work within the Dutch framework for surrogacy and IVF.
+          </p>
+          <p>
+            Our role is to help you understand your options, connect with trusted partners,
+            and keep the process organised and humane.
           </p>
         </div>
         <div class="location-card">
           <h3>Mexico</h3>
-          <p class="coming-soon">Coming soon</p>
+          <p class="coming-soon">Coming soon – carefully selected partnerships</p>
           <p>
-            We are preparing carefully selected partnerships in Mexico to offer
-            safe and well-regulated options for intended parents.
+            We are preparing cross-border programs in Mexico with a focus on clear contracts,
+            safe medical care, and respectful treatment for everyone involved.
+          </p>
+          <p>
+            If you are curious about future Mexico options, you can mention this when you
+            book your information call.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- AI BABY GALLERY -->
+    <section id="gallery">
+      <h2>AI Baby Gallery</h2>
+      <p>
+        Gentle, hopeful AI-generated baby images to capture the feeling of the journey – you can
+        replace these with your own art later.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <!-- Replace with your own AI image -->
+          <img src="images/ai-baby-1.jpg" alt="AI baby illustration 1" />
+          <div class="gallery-caption">Soft pastel newborn illustration</div>
+        </div>
+        <div class="gallery-item">
+          <!-- Replace with your own AI image -->
+          <img src="images/ai-baby-2.jpg" alt="AI baby illustration 2" />
+          <div class="gallery-caption">Parents holding baby silhouette</div>
+        </div>
+        <div class="gallery-item">
+          <!-- Replace with your own AI image -->
+          <img src="images/ai-baby-3.jpg" alt="AI baby illustration 3" />
+          <div class="gallery-caption">Dreamy starlight nursery scene</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="contact-box">
-      <h2>Contact Us</h2>
-      <p>Ready to learn more or ask questions? Reach out and we’ll get back to you as soon as possible.</p>
-      <p><strong>Email:</strong> hello@novafamilie.com</p>
-      <p><strong>Phone:</strong> +31 000 000 000</p>
-      <p><strong>WhatsApp:</strong> +31 000 000 000</p>
-      <p><strong>Address:</strong> Your office address here, Netherlands</p>
+      <h2>Contact Nova Familie</h2>
+      <p>
+        Ready to learn more or just want to ask a few questions? Send us a message and we will
+        reply with information about next steps and possible timelines.
+      </p>
+      <p><strong>Email:</strong> <a href="mailto:hello@novafamilie.com">hello@novafamilie.com</a></p>
+      <p><strong>Based in:</strong> Netherlands</p>
+      <p><strong>Owner:</strong> Erik Finch</p>
+      <p style="margin-top: 10px; font-size: 0.9rem; color: #6b7280;">
+        Please include your country, whether you are interested in surrogacy, IVF, or both,
+        and any important details you want us to know.
+      </p>
     </section>
   </main>
 

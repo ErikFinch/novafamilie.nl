@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nova Familie | Surrogacy & IVF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f7f7fb;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e0e0ee;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.03em;
+    }
+
+    nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 48px 16px 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 520px;
+      margin: 0 auto 24px;
+      color: #555;
+    }
+
+    .hero .cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      background: #4f46e5;
+      color: #fff;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero .cta-btn:hover {
+      opacity: 0.9;
+    }
+
+    section {
+      margin-top: 40px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px 20px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    section h2 {
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+
+    .services-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .services-list li {
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #e0e7ff;
+      font-size: 0.8rem;
+      margin-left: 6px;
+    }
+
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .location-card {
+      border-radius: 10px;
+      border: 1px solid #e0e0ee;
+      padding: 14px 12px;
+      background: #fafbff;
+    }
+
+    .location-card h3 {
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .coming-soon {
+      font-size: 0.85rem;
+      color: #6b21a8;
+      font-weight: 600;
+    }
+
+    .contact-box p {
+      margin-bottom: 8px;
+    }
+
+    .contact-box strong {
+      display: inline-block;
+      width: 80px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 24px 12px 32px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Nova Familie</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Growing Families With Care</h1>
+      <p>
+        Nova Familie supports intended parents on their path to parenthood through surrogacy and IVF
+        with trusted partners in the Netherlands, and soon Mexico.
+      </p>
+      <a href="#contact" class="cta-btn">Book a free info call</a>
+    </section>
+
+    <section id="about">
+      <h2>About Nova Familie</h2>
+      <p>
+        Nova Familie is dedicated to helping individuals and couples build the family they dream of.
+        We focus on clear communication, ethical partnerships, and practical guidance at every step
+        of the surrogacy and IVF journey.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li>
+          <strong>Surrogacy coordination</strong>
+          <span class="tag">Netherlands</span>
+        </li>
+        <li>
+          <strong>IVF support</strong>
+          <span class="tag">Netherlands</span>
+        </li>
+        <li>
+          <strong>Cross-border programs</strong>
+          <span class="tag">Mexico – coming soon</span>
+        </li>
+        <li>
+          Matching with partner clinics, legal teams, and psychological support
+        </li>
+      </ul>
+    </section>
+
+    <section id="locations">
+      <h2>Where We Operate</h2>
+      <div class="locations-grid">
+        <div class="location-card">
+          <h3>Netherlands</h3>
+          <p>
+            Support for local and international intended parents, with coordination
+            between clinics, legal counsel, and support professionals.
+          </p>
+        </div>
+        <div class="location-card">
+          <h3>Mexico</h3>
+          <p class="coming-soon">Coming soon</p>
+          <p>
+            We are preparing carefully selected partnerships in Mexico to offer
+            safe and well-regulated options for intended parents.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-box">
+      <h2>Contact Us</h2>
+      <p>Ready to learn more or ask questions? Reach out and we’ll get back to you as soon as possible.</p>
+      <p><strong>Email:</strong> hello@novafamilie.com</p>
+      <p><strong>Phone:</strong> +31 000 000 000</p>
+      <p><strong>WhatsApp:</strong> +31 000 000 000</p>
+      <p><strong>Address:</strong> Your office address here, Netherlands</p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Nova Familie. All rights reserved.
+  </footer>
+
+  <script>
+    // Set the current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
